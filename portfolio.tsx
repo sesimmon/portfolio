@@ -195,7 +195,7 @@ export default function Portfolio() {
                   <Button size="sm" variant="outline" asChild>
                     <Link href={project.liveUrl} target="_blank">
                       <ExternalLink className="w-3 h-3 mr-1" />
-                      Live
+                      Visit
                     </Link>
                   </Button>
                 </div>
