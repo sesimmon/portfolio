@@ -1,16 +1,16 @@
-import type { Metadata } from "next"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { ExternalLink, Mail, MapPin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-
-export const metadata: Metadata = {
-  title: "This Looks Nice",
-  description: "Web and media development and production services",
-}
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { ExternalLink, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -21,7 +21,15 @@ const projects = [
     whatIDid:
       "I co-founded this company and made the app from the ground up, working alongside my co-founder/CEO and a design team to create product, strategy, and user experience.",
     image: "/images/deepsounds.png",
-    technologies: ["React", "Node.js", "Express.js", "MySQL", "Stripe", "Tailwind CSS", "AI"],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Stripe",
+      "Tailwind CSS",
+      "AI",
+    ],
     role: "Full Stack Developer",
     liveUrl: "https://www.deepsounds.com",
     githubUrl: "https://github.com/example/deepsounds",
@@ -32,7 +40,8 @@ const projects = [
     title: "Elevated Films Chicago",
     description:
       "A nonprofit organization website dedicated to advancing independent cinema and empowering youth through filmmaking mentorship and community outreach programs.",
-    whatIDid: "I created the branding, strategy, content, design, and I developed the site from scratch.",
+    whatIDid:
+      "I created the branding, strategy, content, design, and I developed the site from scratch.",
     image: "/images/elevated-films.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     role: "Branding, Full Stack Developer",
@@ -83,7 +92,8 @@ const projects = [
   {
     id: 6,
     title: "Film Tax Credit Management",
-    description: "I'm currently developing a web application to apply, manage, submit, and finalize film tax credits.",
+    description:
+      "I'm currently developing a web application to apply, manage, submit, and finalize film tax credits.",
     image: "/placeholder.svg?height=200&width=400",
     technologies: ["Next.js", "REST API", "AI"],
     role: "Full Stack Developer",
@@ -91,27 +101,27 @@ const projects = [
     githubUrl: "",
     featured: false,
   },
-]
+];
 
 const getRoleColor = (role: string) => {
   switch (role) {
     case "Full Stack Developer":
-      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300"
+      return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
     case "Frontend Developer":
     case "Frontend Lead":
-      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300"
+      return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
     case "Backend Developer":
-      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300"
+      return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
     case "Branding, Full Stack Developer":
-      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300"
+      return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300";
     default:
-      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300"
+      return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
   }
-}
+};
 
 export default function Portfolio() {
-  const featuredProjects = projects.filter((project) => project.featured)
-  const otherProjects = projects.filter((project) => !project.featured)
+  const featuredProjects = projects.filter((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
 
   return (
     <>
@@ -121,8 +131,12 @@ export default function Portfolio() {
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <h1 className="text-3xl font-bold tracking-tight">Shane Simmons</h1>
-                <p className="text-xl text-muted-foreground mt-1">Designer, Full Stack Developer, Producer</p>
+                <h1 className="text-3xl font-bold tracking-tight">
+                  Shane Simmons
+                </h1>
+                <p className="text-xl text-muted-foreground mt-1">
+                  Designer, Full Stack Developer, Producer
+                </p>
                 <div className="flex items-center gap-4 mt-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
                     <MapPin className="w-4 h-4" />
@@ -149,11 +163,15 @@ export default function Portfolio() {
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-12">
           <div className="max-w-3xl">
-            <h2 className="text-4xl font-bold tracking-tight mb-4">Building digital experiences that matter</h2>
+            <h2 className="text-4xl font-bold tracking-tight mb-4">
+              Building digital experiences that matter
+            </h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              I'm a designer/developer/producer with 15+ years of experience working everywhere from boutique agencies
-              to enterprise institutions, creating human-focused marketing websites and scalable web applications. I
-              specialize in React, Node.js, Drupal, and modern web technologies, with a passion for making user
+              I'm a designer/developer/producer with 15+ years of experience
+              working everywhere from boutique agencies to enterprise
+              institutions, creating human-focused marketing websites and
+              scalable web applications. I specialize in React, Node.js, Drupal,
+              and modern web technologies, with a passion for making user
               experience mesh perfectly with brand goals.
             </p>
           </div>
@@ -162,13 +180,20 @@ export default function Portfolio() {
         {/* Featured Projects */}
         <section className="container mx-auto px-4 py-12">
           <div className="mb-8">
-            <h3 className="text-2xl font-bold tracking-tight mb-2">Featured Projects</h3>
-            <p className="text-muted-foreground">A selection of my most impactful work</p>
+            <h3 className="text-2xl font-bold tracking-tight mb-2">
+              Featured Projects
+            </h3>
+            <p className="text-muted-foreground">
+              A selection of my most impactful work
+            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
-              <Card key={project.id} className="group hover:shadow-lg transition-shadow duration-300">
+              <Card
+                key={project.id}
+                className="group hover:shadow-lg transition-shadow duration-300"
+              >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -178,16 +203,24 @@ export default function Portfolio() {
                     className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 right-3">
-                    <Badge className={getRoleColor(project.role)}>{project.role}</Badge>
+                    <Badge className={getRoleColor(project.role)}>
+                      {project.role}
+                    </Badge>
                   </div>
                 </div>
 
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
-                      <CardTitle className="text-lg mb-2">{project.title}</CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">{project.description}</CardDescription>
-                      <CardDescription className="text-sm mt-2 leading-relaxed">{project.whatIDid}</CardDescription>
+                      <CardTitle className="text-lg mb-2">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-sm leading-relaxed">
+                        {project.description}
+                      </CardDescription>
+                      <CardDescription className="text-sm mt-2 leading-relaxed">
+                        {project.whatIDid}
+                      </CardDescription>
                     </div>
                   </div>
                 </CardHeader>
@@ -220,20 +253,32 @@ export default function Portfolio() {
         {/* Other Projects */}
         <section className="container mx-auto px-4 py-12">
           <div className="mb-8">
-            <h3 className="text-2xl font-bold tracking-tight mb-2">Other Projects</h3>
-            <p className="text-muted-foreground">Additional work and experiments</p>
+            <h3 className="text-2xl font-bold tracking-tight mb-2">
+              Other Projects
+            </h3>
+            <p className="text-muted-foreground">
+              Additional work and experiments
+            </p>
           </div>
 
           <div className="grid gap-4 md:grid-cols-2">
             {otherProjects.map((project) => (
-              <Card key={project.id} className="hover:shadow-md transition-shadow duration-200">
+              <Card
+                key={project.id}
+                className="hover:shadow-md transition-shadow duration-200"
+              >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <CardTitle className="text-lg">{project.title}</CardTitle>
-                      <CardDescription className="text-sm mt-1">{project.description}</CardDescription>
+                      <CardDescription className="text-sm mt-1">
+                        {project.description}
+                      </CardDescription>
                     </div>
-                    <Badge className={getRoleColor(project.role)} variant="secondary">
+                    <Badge
+                      className={getRoleColor(project.role)}
+                      variant="secondary"
+                    >
                       {project.role}
                     </Badge>
                   </div>
@@ -281,7 +326,10 @@ export default function Portfolio() {
               >
                 <Github className="w-5 h-5" />
               </Link> */}
-                <Link href="mailto:shane@thislooksnice.com" className="text-muted-foreground hover:text-foreground">
+                <Link
+                  href="mailto:shane@thislooksnice.com"
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   <Mail className="w-5 h-5" />
                 </Link>
               </div>
@@ -290,5 +338,5 @@ export default function Portfolio() {
         </footer>
       </div>
     </>
-  )
+  );
 }
