@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -5,6 +6,11 @@ import { Separator } from "@/components/ui/separator"
 import { ExternalLink, Github, Mail, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "This Looks Nice",
+  description: "Web and media development and production services",
+};
 
 const projects = [
   {
@@ -105,6 +111,7 @@ export default function Portfolio() {
   const otherProjects = projects.filter((project) => !project.featured)
 
   return (
+  <>
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b">
@@ -277,5 +284,6 @@ export default function Portfolio() {
         </div>
       </footer>
     </div>
+    </>
   )
 }
