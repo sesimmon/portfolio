@@ -12,6 +12,43 @@ import { ExternalLink, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+const clients = [
+  {
+    name: "Wells Fargo",
+    logo: "/images/wells-fargo-logo.png?height=60&width=140",
+  },
+  { name: "Lowe's", logo: "/images/lowes-logo.png?height=60&width=140" },
+  {
+    name: "Northern Trust",
+    logo: "/images/northern-trust-logo.png?height=60&width=140",
+  },
+  {
+    name: "Jack Daniels",
+    logo: "/images/jack-daniels-logo.png?height=60&width=140",
+  },
+  { name: "Glenlivet", logo: "/images/glenlivet-logo.jpg?height=60&width=140" },
+  {
+    name: "General Mills",
+    logo: "/images/general-mills-logo.png?height=60&width=140",
+  },
+  {
+    name: "Eastman Chemical Company",
+    logo: "/images/eastman-logo.png?height=60&width=140",
+  },
+  {
+    name: "Deep Sounds",
+    logo: "/images/deep-sounds-logo.png?height=60&width=140",
+  },
+  {
+    name: "Elevated Films Chicago",
+    logo: "/images/elevated-films-logo.png?height=60&width=140",
+  },
+  {
+    name: "Proofpoint",
+    logo: "/images/proofpoint-logo.png?height=60&width=140",
+  },
+];
+
 const projects = [
   {
     id: 1,
@@ -82,7 +119,7 @@ const projects = [
     title: "Events Calendar",
     description:
       "I'm currently developing a comprehensive events calendar website to attempt to catalog every event in the city, at all times.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/images/logo.png?height=200&width=400",
     technologies: ["Next.js", "REST API", "AI"],
     role: "Full Stack Developer",
     liveUrl: "",
@@ -94,7 +131,7 @@ const projects = [
     title: "Film Tax Credit Management",
     description:
       "I'm currently developing a web application to apply, manage, submit, and finalize film tax credits.",
-    image: "/placeholder.svg?height=200&width=400",
+    image: "/images/logo.png?height=200&width=400",
     technologies: ["Next.js", "REST API", "AI"],
     role: "Full Stack Developer",
     liveUrl: "",
@@ -148,25 +185,25 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <Button size="sm" asChild>
                   <Link href="mailto:shane@thislooksnice.com">
                     <Mail className="w-4 h-4 mr-2" />
                     Contact
                   </Link>
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </header>
 
         {/* Hero Section */}
-        <section className="container mx-auto px-4 py-12">
-          <div className="max-w-3xl">
+        <section className="container mx-auto px-4 py-12 lg:flex lg:gap-6">
+          <div className="max-w-3xl lg:w-1/3">
             <h2 className="text-4xl font-bold tracking-tight mb-4">
               Building digital experiences that matter
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               I'm a designer/developer/producer with 15+ years of experience
               working everywhere from boutique agencies to enterprise
               institutions, creating human-focused marketing websites and
@@ -175,10 +212,35 @@ export default function Portfolio() {
               experience mesh perfectly with brand goals.
             </p>
           </div>
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center px-4">
+              {clients.map((client, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center p-4 bg-white group"
+                >
+                  <Image
+                    src={client.logo || "/images/logo.png"}
+                    alt={`${client.name} logo`}
+                    width={140}
+                    height={60}
+                    className="max-w-full h-auto opacity-80 group-hover:opacity-100 transition-opacity duration-200"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="w-full text-center mt-12">
+              <p className="text-sm text-gray-500 w-full">
+                From Fortune 500 companies to innovative startups and
+                nonprofits, I bring the same level of dedication and expertise
+                to every project.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Featured Projects */}
-        <section className="container mx-auto px-4 py-12">
+        <section className="container mx-auto px-4 py-6">
           <div className="mb-8">
             <h3 className="text-2xl font-bold tracking-tight mb-2">
               Featured Projects
@@ -196,7 +258,7 @@ export default function Portfolio() {
               >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/images/logo.png"}
                     alt={project.title}
                     width={400}
                     height={200}
