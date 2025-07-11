@@ -36,8 +36,8 @@ const clients = [
     logo: "/images/eastman-logo.png?height=60&width=140",
   },
   {
-    name: "Deep Sounds",
-    logo: "/images/deep-sounds-logo.png?height=60&width=140",
+    name: "The University of Iowa",
+    logo: "/images/iowa-logo.png?height=60&width=140",
   },
   {
     name: "Elevated Films Chicago",
@@ -120,7 +120,7 @@ const projects = [
     description:
       "I'm currently developing a comprehensive events calendar website to attempt to catalog every event in the city, at all times.",
     image: "/images/logo.png?height=200&width=400",
-    technologies: ["Next.js", "REST API", "AI"],
+    technologies: ["Next.js", "Tailwind CSS", "REST API", "AI"],
     role: "Full Stack Developer",
     liveUrl: "",
     githubUrl: "",
@@ -132,7 +132,7 @@ const projects = [
     description:
       "I'm currently developing a web application to apply, manage, submit, and finalize film tax credits.",
     image: "/images/logo.png?height=200&width=400",
-    technologies: ["Next.js", "REST API", "AI"],
+    technologies: ["Next.js", "Tailwind CSS", "REST API", "AI"],
     role: "Full Stack Developer",
     liveUrl: "",
     githubUrl: "",
@@ -164,7 +164,7 @@ export default function Portfolio() {
     <>
       <div className="min-h-screen bg-background">
         {/* Header */}
-        <header className="border-b">
+        <header className="border-b mb-8">
           <div className="container mx-auto px-4 py-6">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
@@ -213,7 +213,7 @@ export default function Portfolio() {
             </p>
           </div>
           <div className="w-full lg:w-2/3">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 items-center px-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center px-12">
               {clients.map((client, index) => (
                 <div
                   key={index}
@@ -240,7 +240,7 @@ export default function Portfolio() {
         </section>
 
         {/* Featured Projects */}
-        <section className="container mx-auto px-4 py-6">
+        <section className="container mx-auto px-4 py-6 mb-8">
           <div className="mb-8">
             <h3 className="text-2xl font-bold tracking-tight mb-2">
               Featured Projects
