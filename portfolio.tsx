@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ExternalLink, Mail, MapPin } from "lucide-react";
+import { ExternalLink, Mail, MapPin, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -67,7 +67,7 @@ const projects = [
       "Tailwind CSS",
       "AI",
     ],
-    role: "Full Stack Developer",
+    role: "Design, UX, Full Stack Developer",
     liveUrl: "https://www.deepsounds.com",
     githubUrl: "https://github.com/example/deepsounds",
     featured: true,
@@ -81,7 +81,7 @@ const projects = [
       "I created the branding, strategy, content, design, and I developed the site from scratch.",
     image: "/images/elevated-films.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    role: "Branding, Full Stack Developer",
+    role: "Branding, Design, Full Stack Developer",
     liveUrl: "https://www.elevatedfilmschicago.com",
     githubUrl: "https://github.com/example/elevated-films",
     featured: true,
@@ -121,7 +121,7 @@ const projects = [
       "I'm currently developing a comprehensive events calendar website to attempt to catalog every event in the city, at all times.",
     image: "/images/logo.png?height=200&width=400",
     technologies: ["Next.js", "Tailwind CSS", "REST API", "AI"],
-    role: "Full Stack Developer",
+    role: "Branding, Design, UX, Full Stack Developer",
     liveUrl: "",
     githubUrl: "",
     featured: false,
@@ -133,7 +133,7 @@ const projects = [
       "I'm currently developing a web application to apply, manage, submit, and finalize film tax credits.",
     image: "/images/logo.png?height=200&width=400",
     technologies: ["Next.js", "Tailwind CSS", "REST API", "AI"],
-    role: "Full Stack Developer",
+    role: "Branding, Design, UX, Full Stack Developer",
     liveUrl: "",
     githubUrl: "",
     featured: false,
@@ -185,14 +185,21 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              {/* <div className="flex gap-2">
-                <Button size="sm" asChild>
-                  <Link href="mailto:shane@thislooksnice.com">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Contact
+              <div className="flex gap-2">
+                <Button
+                  className="py-6 text-md"
+                  size="lg"
+                  variant={"outline"}
+                  asChild
+                >
+                  <Link
+                    href="/ShaneSimmonsResume-Developer.pdf"
+                    target="_blank"
+                  >
+                    Download Resume <FileDown />
                   </Link>
                 </Button>
-              </div> */}
+              </div>
             </div>
           </div>
         </header>
