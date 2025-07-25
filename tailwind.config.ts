@@ -9,6 +9,13 @@ const config: Config = {
     "*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
+		container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
   	extend: {
   		colors: {
   			background: 'hsl(var(--background))',
@@ -16,7 +23,13 @@ const config: Config = {
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
-  			},
+				},
+				// Paladin Management Group color palette
+        "paladin-dark-blue": "#0A2342", // Main text, primary elements
+        "paladin-red": "#C8102E", // Accent color, buttons
+        "paladin-gold": "#B8860B", // Secondary accent, subtle highlights
+        "paladin-light-gray": "#F9F9F9", // Subtle background variations
+        "paladin-white": "#FFFFFF", // Main background
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
