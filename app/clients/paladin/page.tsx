@@ -847,15 +847,36 @@ export default function WebsiteRebuildProposal() {
         </section>
         {/* Thank You Section */}
         <section className="w-full py-16 md:py-28 lg:py-36 bg-paladin-white dark:bg-gray-950">
-          <div className="container px-4 md:px-6 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-paladin-dark-blue dark:text-gray-50">
+          <div className="container px-4 md:px-6 text-left max-w-[800px] mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-paladin-dark-blue dark:text-gray-50 text-center">
               Thank You
             </h2>
-            <p className="mx-auto max-w-[800px] text-paladin-dark-blue/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed dark:text-gray-400 mt-4">
-              Thank you for considering our proposal. We are genuinely excited
-              about the opportunity to collaborate with you and help achieve
-              your digital goals. We look forward to working together!
+            <p className="max-w-[800px] text-paladin-dark-blue/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed dark:text-gray-400 mt-8">
+              Paladin Team,
             </p>
+            <p className="max-w-[800px] text-paladin-dark-blue/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed dark:text-gray-400 mt-8">
+              Thank you for considering this proposal. I am genuinely excited
+              about the opportunity to collaborate with you and help achieve
+              your digital goals.
+            </p>
+            <p className="max-w-[800px] text-paladin-dark-blue/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed dark:text-gray-400 mt-8">
+              Looking forward to working together!
+            </p>
+            <div className="text-left">
+              <p className="max-w-[800px] text-paladin-dark-blue/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed leading-relaxed dark:text-gray-400 mt-8">
+                Shane Simmons
+              </p>
+              <p className="text-xs">Web Designer & Developer</p>
+              <p className="text-xs pt-1">
+                <a
+                  href="https://www.thislooksnice.com/"
+                  className="underline"
+                  target="_blank"
+                >
+                  This Looks Nice
+                </a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
